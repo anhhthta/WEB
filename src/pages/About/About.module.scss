@@ -1,0 +1,204 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.my_img-slide {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.my_img-1 {
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+        url('../../assert/images/slide-about1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.my_img-2 {
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+        url('../../assert/images/slide-about2.jpg') no-repeat;
+    background-size: cover;
+}
+
+.my_carousel-caption {
+    top: 20%;
+    bottom: auto;
+    text-align: unset;
+
+    h3 {
+        font-size: 5rem;
+    }
+    > p {
+        margin-left: 25px;
+        font-size: 2rem;
+    }
+
+    .wel_com {
+        position: relative;
+        font-weight: 500;
+        left: 50px;
+        top: -20px;
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            background-color: var(--primary-color);
+            width: 29px;
+            height: 1px;
+            top: 50%;
+            left: -42px;
+        }
+    }
+}
+
+.about {
+    padding: 80px 55px;
+    > div:has(img) {
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.we-have h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.we-have {
+    padding-top: 50px;
+    background-color: #090c0f;
+
+    .list-card {
+        padding: 50px;
+        border-radius: 15px;
+        width: 90%;
+
+        > div + div {
+            margin-top: 50px;
+        }
+    }
+}
+
+.achievement {
+    background-color: var(--card-color-dark);
+    > div {
+        padding: 55px 0;
+    }
+
+    .icon {
+        font-size: 65px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+}
+
+.staffs {
+    > div {
+        margin-bottom: 10px;
+    }
+    .item {
+        position: relative;
+        border: none;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+            height: 260px;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .contact-info {
+            border-radius: 3px;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 0 0 15px;
+            text-align: left;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+
+            .contact-info {
+                opacity: 0.7;
+                h6 {
+                    opacity: 1;
+                }
+            }
+
+            .content {
+                h4,
+                p {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}
+
+.feetback {
+    .item {
+        padding: 50px 30px 25px;
+        position: relative;
+        background-color: var(--card-color-dark);
+
+        margin-top: 50px;
+
+        img {
+            position: absolute;
+            top: -35px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 75px;
+            border: 2px solid var(--primary-color);
+            border-radius: 100%;
+        }
+
+        p {
+            max-height: 165px;
+            min-height: 165px;
+            display: -webkit-box;
+            -webkit-line-clamp: 7; /* Số dòng tối đa */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.video {
+    background-color: #0e1012e5;
+    padding: 70px 9%;
+    .item {
+        max-height: 550px;
+    }
+}
+
+.book {
+    margin: 50px 60px;
+
+    h1 {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+}

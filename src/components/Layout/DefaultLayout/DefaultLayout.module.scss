@@ -1,0 +1,61 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.wrapper {
+    position: relative;
+}
+
+.content {
+    position: relative;
+    top: var(--header-height);
+    padding: 0;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 80px;
+    right: -1px;
+
+    width: 90px;
+    height: 35px;
+    font-weight: 450;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.7s ease;
+    z-index: 200;
+
+    &:hover {
+        color: #fff;
+        width: 100px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 0;
+        background-color: var(--primary-color);
+        z-index: -1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transition: width 0.7s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
+
+.hidden_btn {
+    display: none !important;
+}
